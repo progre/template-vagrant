@@ -1,0 +1,11 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  sudo: yes
+  tasks:
+    - name: install ruby
+      apt: pkg=ruby update_cache=yes
+    - name: install rubygems
+      apt: pkg=rubygems update_cache=yes
+    - name: install bundler
+      command: gem install bundler
