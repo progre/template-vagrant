@@ -2,4 +2,20 @@
 - hosts: 127.0.0.1
   connection: local
   sudo: yes
+  vars:
+    home: /home/vagrant
   tasks:
+    - name: install packages
+      apt: pkg=git update_cache=yes
+      apt: pkg=mercurial update_cache=yes
+      apt: pkg=python update_cache=yes
+      apt: pkg=python-dev update_cache=yes
+      apt: pkg=python-setuptools update_cache=yes
+    - name: install dulwich
+      shell: if ! [ `which dulwich` ]; then easy_install 'dulwich>=0.4.0'; fi
+    - name: install hg-git
+      git: repo=git://github.com/schacon/hg-git.git dest={{home}}/hg-git
+    - name: put .hgrc
+      template: src=templates/.hgrc dest={{home}}/.hgrc owner=vagrant group=vagrant mode=0644
+    - name: set workspace
+      file: state=link src=/vagrant/workspace dest={{home}}/workspace
