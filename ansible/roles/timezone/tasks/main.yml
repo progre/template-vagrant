@@ -1,0 +1,7 @@
+---
+- name: set timezone to Asia/Tokyo
+  sudo: yes
+  copy: content="Asia/Tokyo" dest=/etc/timezone
+        owner=root group=root mode=0644
+  notify:
+    - update timezone

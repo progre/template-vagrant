@@ -1,0 +1,10 @@
+---
+- name: install git
+  sudo: yes
+  apt: name={{ item }} state=installed
+  with_items:
+    - git
+    - tig
+
+- name: copy .gitconfig
+  copy: src=.gitconfig dest=~/.gitconfig mode=664

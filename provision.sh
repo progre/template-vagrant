@@ -5,4 +5,4 @@ if ! [ `which ansible` ]; then
 	apt-get install -y ansible
 fi
 
-ansible-playbook -i /vagrant/ansible/hosts /vagrant/ansible/playbook.yml
+ansible-playbook -i /vagrant/ansible/hosts /vagrant/ansible/playbook.yml -v
