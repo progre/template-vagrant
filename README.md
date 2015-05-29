@@ -51,7 +51,7 @@ vagrant-ansible-serverspec配下に移動し、以下のコマンドを実行す
 $ vagrant up
 ```
 
-仮想マシンの状態を確認んするには以下のコマンドを実行する。
+仮想マシンの状態を確認するには以下のコマンドを実行する。
 ```bash
 $ vagrant status
 Current machine states:
