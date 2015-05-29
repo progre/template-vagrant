@@ -6,11 +6,12 @@
 
 ## 準備
 
-Windowsの環境設定で環境変数に以下の値を設定する。
+Windowsの環境設定で環境変数に自身の環境に合ったproxyの値を設定する。
 
 | 変数名     | 値                          |
 | ---------- | --------------------------- |
 | `http_proxy`| `http://proxyhost:proxyport/` |
+| `https_proxy`| `http://proxyhost:proxyport/` |
 
 
 
