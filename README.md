@@ -6,6 +6,14 @@
 
 ## 準備
 
+Windowsの環境設定で環境変数に以下の値を設定する。
+
+| 変数名     | 値                          |
+| ---------- | --------------------------- |
+| `http_proxy`| `http://proxyhost:proxyport/` |
+
+
+
 Gitが入っているのであれば [tenten0213/vagrant-ansible-serverspec](https://github.com/tenten0213/vagrant-ansible-serverspec) をcloneする。
 
 入っていない場合はDownload ZIPからzipファイルを取得し、任意の場所に解凍する。
