@@ -86,7 +86,8 @@ OKを押すと接続される。
 
 ![connected](./images/connected.jpg)
 
-AnsibleとServerspecがインストールされているか確認する。
+AnsibleとServerspecがインストールされているか確認する。(2015/06/01時点)
+
 
 ```bash
 $ gem list
@@ -109,5 +110,6 @@ serverspec (2.17.0)
 specinfra (2.34.4)
 
 $ ansible --version
-ansible 1.5.4
+ansible 1.9.1
+  configured module search path = None
 ```
