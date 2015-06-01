@@ -1,6 +1,5 @@
 ---
 - name: install packages
-  sudo: yes
   apt: name={{ item }} state=installed
   with_items:
     - tree

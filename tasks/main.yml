@@ -1,8 +1,6 @@
 ---
-- hosts: 127.0.0.1
-  connection: local
+- hosts: localhost
   roles:
-    - timezone
     - packages
     - git
     - serverspec

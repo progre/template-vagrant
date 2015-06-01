@@ -8,4 +8,6 @@ if ! [ `which ansible` ]; then
   apt-get install -y ansible
 fi
 
-ansible-playbook -i /vagrant/ansible/hosts /vagrant/ansible/playbook.yml -v
+GEM_PATH=`which gem`;
+
+ansible-playbook -i /vagrant/tasks/hosts /vagrant/tasks/main.yml -v -s --extra-vars gem_path="${GEM_PATH}"

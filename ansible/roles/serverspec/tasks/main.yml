@@ -1,7 +1,0 @@
----
-- name: install rake and serverspec
-  sudo: yes
-  gem: name={{ item }} state=latest user_install=no include_dependencies=yes
-  with_items:
-    - rake
-    - serverspec
