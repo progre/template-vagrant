@@ -1,0 +1,6 @@
+---
+- name: install rake and serverspec
+  gem: name={{ item }} state=present user_install=no include_dependencies=yes executable={{ gem_path }}
+  with_items:
+    - rake
+    - serverspec

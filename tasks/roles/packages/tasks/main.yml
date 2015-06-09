@@ -1,0 +1,9 @@
+---
+- name: install packages
+  apt: name={{ item }} state=installed
+  with_items:
+    - tree
+    - unzip
+    - subversion
+    - vim
+    - tmux
